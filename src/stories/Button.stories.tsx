@@ -9,6 +9,7 @@ type StoryProps = ComponentProps<typeof Button> & {
 
 const meta: Meta<StoryProps> = {
   component: Button,
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       options: ['primary', 'secondary'],
@@ -32,9 +33,17 @@ export const Primary: Story = {
   args: {
     buttonText: 'Click Me',
     variant: 'primary',
-    size: 'md'
+    size: 'lg'
   },
   render({buttonText, ...args}) {
     return <Button {...args}>{buttonText}</Button>;
+  }
+};
+
+export const Secondary: Story = {
+  args: {
+    buttonText: 'Click Me',
+    variant: 'secondary',
+    size: 'md'
   }
 };
